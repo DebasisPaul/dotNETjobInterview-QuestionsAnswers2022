@@ -183,6 +183,7 @@ If statements checks for the user given condition to satisfy their programming c
 
 Syntax:
 
+```
 If(any condition)
 {
 //code to be executed if the condition returns true
@@ -227,6 +228,7 @@ Else
 {
 //code will run if no other condition is true
 }
+```
 
 # Question: Explain the concept of boxing and unboxing of the value type and object type in C#.
 Answer: 
@@ -234,6 +236,7 @@ Answer:
 Boxing- is a process of converting a value type to an object type where value type is placed on the stack memory, and the object type is placed in the heap memory. This conversion is an implicit conversion and you can directly assign any value to an object, and C# will handle the rest of the conversion on its own.
 Example:
 
+```
 public void function()
 {
 Int a=111;
@@ -250,10 +253,11 @@ Object b=111;
 Int a=(int)b; //implicit conversion
 Console.WriteLine(a);
 }
+```
 
 # Question: How can you check if a number is an Armstrong number or not with C#?
 Answer:
-
+```
 using System;  
   public class ArmstrongDemo  
    {  
@@ -275,6 +279,7 @@ using System;
         Console.Write("Not Armstrong Number.");      
       }  
   }  
+  ```
 Output:
 
 Enter the Number= 371
@@ -291,7 +296,7 @@ Output Parameters: This method returns more than one value to the method.
 
 # Question: What is a multicast delegate in C#?
 Answer: A multicast delegate holds the references or addresses to more than one function at a single time. Whenever we invoke the multicast delegate, it will invoke all the other functions that are being referred by that multicast delegate. You should use the complete method signature the same as the delegate to call multiple methods. For example:
-
+```
 namespace MulticastDelegate
 {
 public class Rectangle
@@ -313,10 +318,11 @@ Console.ReadKey();
 }
 }
 }
+```
 Here, we created an instance of the Rectangle class and then called the two different methods. Now a single delegate will invoke these two methods Area and Perimeter. These defined methods are having the same signature as the defined delegates that hold the reference to these methods.
 
 Creating multicast delegate:
-
+```
 namespace MulticastDelegateDemo
 {
 public delegate void RectangleDelete(double Width, double Height);
@@ -346,18 +352,22 @@ Console.ReadKey();
 }
 }
 }
-Question: How you can implement nullable<> types in C#? explain with the syntax of Nullable type.
+```
+
+# Question: How you can implement nullable<> types in C#? explain with the syntax of Nullable type.
 Answer: In C#, you cannot put a null value directly into any variable and the compiler does not support it. So, the revised version C# 2.0 provides you with a special feature that will assign a null value to a variable that is called as the Nullable type. You cannot make the nullable types to work with value types. Nullable value can only work with the reference types as it already has a null value. System.Nullable<T> structure creates the instance nullable type, where T defines the data type. This T contains a non-nullable value type that can be any data type you want.
 
 Syntax
 
+```
 Nullable<data_type> variable_name=null;
 OR
 
 Datatype? variable_name=null;
 There is no possibility that you can access the value of the nullable value type directly with assigning the value. For getting its original assigned value you have to use the method GetValueOrDefault(). If the value is null then it will provide zero as it is its default value.
+```
 
-Question: What do you mean by value types and reference types in C#?
+# Question: What do you mean by value types and reference types in C#?
 Answer:
 
 Value type:
@@ -368,9 +378,10 @@ Reference Type:
 
 It holds the reference to the address of the object but not the object directly. Reference types represent the address of the variable and assigning a reference variable to another does not copy the data but it creates a second copy of the reference which represents the same location on the heap as the original value. Reference values are stored on the heap and when the reference variable is no longer required it gets marked for garbage collection.
 
-Question: What are various types of comments in C#, explain with example?
+# Question: What are various types of comments in C#, explain with example?
 Answer:  C# supports three types of comments-
 
+```
 1. Single line comment
 
 Syntax:  //single line
@@ -384,8 +395,9 @@ Syntax: /* multiple lines
 3. XML comment
 
 Syntax: /// set error
+```
 
-Question: What are the constructors?
+# Question: What are the constructors?
 Answer: In C#, there is a special method that is invoked automatically at the time of object creation. It initializes the data members of a new object and has the same name as the class or the structure. There are two types of constructors:
 
 Default constructor: it has no parameter to pass.
@@ -407,7 +419,7 @@ Queue: this collection works on the concept of first-in and first-out collection
 
 BitArray: this collection class is used to represent the array in binary form (0 and 1). You can use this collection class when you do not know the number and the items can be accessed by using integer indexes that start from zero.
 
-Question: Explain file handling in C#.
+# Question: Explain file handling in C#.
 Answer: Whenever you open a file for reading or writing it becomes a stream which is a sequence of bytes travelling from source to destination. The two commonly used streams are input and output. The included namespace is system.IO that includes many classes for file handling. The stream is an abstract class that is the parent class for the file handling process. The file is a static class with many static methods to handle file operation.
 
 Below are the used classes:
@@ -428,7 +440,7 @@ Question: Define interface class in C#? Explain with an example.
 Answer: An interface class is completely an abstract class that contains abstract methods and properties. By default, the members of the interface class are abstract and public with no fields defined. If you want to access the interface methods then the interface must be implemented by another class using ‘:’ symbol. If you want to define the body of the methods that can only be implemented in the implementing class.
 
 For example:
-
+```
 // Interface
 Interface IAnimal {
   void Sound(); // interface method (without body)
@@ -447,22 +459,24 @@ class Program
  Pig myPig = new Pig();  // Create a Pig object
     myPig.animalSound();
   }}
-Question: Explain the concept of thread in C#.
+  ```
+
+# Question: Explain the concept of thread in C#.
 Answer: A thread can be defined as the execution flow of any program and defines a unique flow of control. You can manage these threads' execution time so that their execution does not overlap the execution of other threads and prevent deadlock or to maintain efficient usage of resources. Threads are lightweight programs that save the CPU consumption and increase the efficiency of the application. The thread cycle starts with the creation of the object of system.threading.thread class and ends when the thread terminates.
 
 System.threading.thread class allows you to handle multiple threads and the first thread always runs in a process called the main thread. Whenever you run a program in C#, the main thread runs automatically.
 
-Question: Define structure in C# with example.
+# Question: Define structure in C# with example.
 Answer: A structure is a data type of a value type. A struct keyword is used when you are going to define a structure. A structure represents a record and this record can have many attributes that define the structure.  You can define a constructor but not destructor for the structure. You can implement one or more interfaces within the structure. You can specify a structure but not as abstract, virtual, or protected. If you do not use the new operator the fields of the structure remain unassigned and you cannot use the object till you initialize the fields.
 
-Question: What do you mean by user control and custom control in C#?
+# Question: What do you mean by user control and custom control in C#?
 Answer: User controls are very easy to create and are very much the same as the ASP control files. You cannot place a user control on the toolbox and cannot even drag-drop it. They have unique design and individual code behind these controls. Ascx is the file extension for user control. 
 
 You can create custom code as the compiled code and can be added to the toolbox. You can include these controls to the web forms easily. Custom controls can be added to multiple applications efficiently. If you want to add a private custom control then you can copy it to dll and then to the bin directory of your web application and use its reference there.
 
-Question: C# program to remove an element from the queue.
+# Question: C# program to remove an element from the queue.
 Answer:
-
+```
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -491,9 +505,12 @@ namespace Application
    }
  }
 }
-Question: How to find if a number is a palindrome or not in C#.
+```
+
+# Question: How to find if a number is a palindrome or not in C#.
 Answer:
 
+```
 using System;  
   public class PalindromeNum  
    {  
@@ -515,19 +532,21 @@ using System;
            Console.Write("Number is not Palindrome");     
     }  
   }  
-Question: How will you differentiate between a Class and a Struct?
+  ```
+
+# Question: How will you differentiate between a Class and a Struct?
 
 Answer: Although both class and structure are user-defined data types, they are different in several fundamental ways. A class is a reference type and stores on the heap. Struct, on the other hand, is a value type and is, therefore, stored on the stack. While the structure doesn’t support inheritance and polymorphism, the class provides support for both. A class can be of an abstract type, but a structure can’t. All members of a class are private by default, while members of a struct are public by default. Another distinction between class and struct is based on memory management. The former supports garbage collection while the latter doesn’t.
 
-Question: Compare Virtual methods and Abstract methods.
+# Question: Compare Virtual methods and Abstract methods.
 Answer: Any Virtual method must have a default implementation, and it can be overridden in the derived class using the override keyword. On the contrary, an Abstract method doesn’t have an implementation, and it resides in the abstract class. The derived class must implement the abstract method. Though not necessary, we can use an override keyword here.
 
-Question: What are Namespaces in C#?
+# Question: What are Namespaces in C#?
 Answer: Use of namespaces is for organizing large code projects. The most widely used namespace in C# is System. Namespaces are created using the namespace keyword. It is possible to use one namespace in another, known as Nested Namespaces.
 
-Question: What are I/O classes in C#? Define some of the most commonly used ones.
+# Question: What are I/O classes in C#? Define some of the most commonly used ones.
 Answer: The System.IO namespace in C# consists of several classes used for performing various file operations, such as creation, deletion, closing, and opening. Some of the most frequently used I/O classes in C# are:
-
+```
 File – Manipulates a file
 Path – Performs operations related to some path information
 StreamReader – Reads characters from a stream
@@ -548,9 +567,11 @@ Console.WriteLine(“Match found”);
 }
 }
 }
-Question: Give a detailed explanation of Delegates in C#.
-Answer: Delegates are variables that hold references to methods. It is a function pointer or reference type. Both the Delegate and the method to which it refers can have the same signature. All Delegates derives from the
+```
 
+# Question: Give a detailed explanation of Delegates in C#.
+Answer: Delegates are variables that hold references to methods. It is a function pointer or reference type. Both the Delegate and the method to which it refers can have the same signature. All Delegates derives from the
+```
 System.Delegate namespace.
 Following example demonstrates declaring a delegate:
 
@@ -559,8 +580,9 @@ After declaring a delegate, the object must be created of the delegate using the
 
 AddNumbers an1 = new AddNumbers(number);
 The Delegate offers a kind of encapsulation to the reference method, which gets internally called with the calling of the delegate. In the following example, we have a delegate myDel that takes an integer value as a parameter: public delegate int myDel(int number); public class Program { public int AddNumbers(int a) { Int Sum = a + 10; return Sum; } public void Start() { myDel DelgateExample = AddNumbers; } }
+```
 
-Question: Explain Reflection in C#.
+# Question: Explain Reflection in C#.
 Answer: The ability of code to access the metadata of the assembly during runtime is called Reflection. A program reflects upon itself and uses the metadata to:
 
 Inform the user, or
@@ -585,10 +607,10 @@ SOAP – It produces a complete SOAP compliant envelope that is usable by any sy
 XML Serialization – Serializes all the public properties to the XML document. In addition to being easy to read, the XML document manipulated in several formats. The classes in this type of serialization reside in System.sml.Serialization.
 Note: Retrieving the C# code back from the binary form is known as Deserialization.
 
-Question: Give a brief explanation of Thread Pooling in C#.
+# Question: Give a brief explanation of Thread Pooling in C#.
 Answer: A collection of threads, termed as a Thread Pool in C#. Such threads are for performing tasks without disturbing the execution of the primary thread. After a thread belonging to a thread pool completes execution, it returns to the thread pool. Classes that manage the thread in the thread pool, and its operations, are contained in the System.Threading.ThreadPool namespace.
 
-Question: Is it possible to use this keyword within a static method in C#?
+# Question: Is it possible to use this keyword within a static method in C#?
 Answer: A special type of reference variable, this keyword is implicitly defined with each non-static method and constructor as the first parameter of the type class, which defines it. Static methods don’t belong to a particular instance. Instead, they exist without creating an instance of the class and calls with the name of the class. Because this keyword returns a reference to the current instance of the class containing it, it can’t be used in a static method. Although we can’t use this keyword within a static method, we can use it in the function parameters of Extension Methods.
 
 Question: What can you tell us about the XSD file in C#?
