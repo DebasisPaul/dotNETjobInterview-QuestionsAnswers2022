@@ -613,15 +613,16 @@ Answer: A collection of threads, termed as a Thread Pool in C#. Such threads are
 # Question: Is it possible to use this keyword within a static method in C#?
 Answer: A special type of reference variable, this keyword is implicitly defined with each non-static method and constructor as the first parameter of the type class, which defines it. Static methods don’t belong to a particular instance. Instead, they exist without creating an instance of the class and calls with the name of the class. Because this keyword returns a reference to the current instance of the class containing it, it can’t be used in a static method. Although we can’t use this keyword within a static method, we can use it in the function parameters of Extension Methods.
 
-Question: What can you tell us about the XSD file in C#?
+# Question: What can you tell us about the XSD file in C#?
 Answer: XSD denotes XML Schema Definition. The XML file can have any attributes, elements, and tags if there is no XSD file associated with it. The XSD file gives a structure for the XML file, meaning that it determines what, and also the order of, the elements and properties that should be there in the XML file. Note: - During serialization of C# code, the classes are converted to XSD compliant format by the Xsd.exe tool.
 
-Question: What do you mean by Constructor Chaining in C#?
+# Question: What do you mean by Constructor Chaining in C#?
 Answer: Constructor chaining in C# is a way of connecting two or more classes in a relationship as an inheritance. Every child class constructor is mapped to the parent class constructor implicitly by using the base keyword in constructor chaining.
 
-Question: Explain different states of a Thread in C#?
+# Question: Explain different states of a Thread in C#?
 Answer: A thread in C# can have any of the following states:
 
+```
 Aborted – The thread is dead but not stopped
 Running – The thread is executing
 Stopped – The thread has stopped execution
@@ -630,6 +631,7 @@ Unstarted – The thread is created but has not started execution yet
 WaitSleepJoin – The thread calls sleep, calls wait on another object, and calls join on some other thread
 Question: Why do we use Async and Await in C#?
 Answer: Processes belonging to asynchronous programming run independently of the main or other processes. In C#, using Async and Await keywords for creating asynchronous methods.
+```
 
 # Question: What is an Indexer in C#, and how do you create one?
 Answer: Also known as an indexed property, an indexer is a class property allowing accessing a member variable of some class using features of an array. Used for treating an object as an array, indexer allows using classes more intuitively. Although not an essential part of the object-oriented programming, indexers are a smart way of using arrays. As such, they are also called smart arrays. Defining an indexer enables creating classes that act like virtual arrays. Instances of such classes can be accessed using the [] array access operator. The general syntax for creating an indexer in C# is:
@@ -663,6 +665,7 @@ Data Passing – Using out allows for passing data only in a unidirectional way.
 # Question: What is Singleton Design Patterns in C#? Explain their implementation using an example.
 Answer: A singleton in C# is a class that allows the creation of only a single instance of itself and provides simple access to that sole instance. Because the second request of an instance with a different parameter can cause problems, singletons typically disallow any parameters to be specified. Following example demonstrates the implementation of Singleton Design Patterns in C#:
 
+```
 namespace Singleton {
 class Program {
 static void Main(string[] args) {
@@ -714,6 +717,8 @@ return ValueOne / ValueTwo;
 }
 }
 }
+```
+
 A Singleton Design Pattern ensures that a class has one and only one instance and provides a global point of access to the same. There are numerous ways of implementing the Singleton Design Patterns in C#. Following are the typical characteristics of a Singleton Pattern:
 
 A public static means of getting the reference to the single instance created
