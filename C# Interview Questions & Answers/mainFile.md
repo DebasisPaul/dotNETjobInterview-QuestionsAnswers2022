@@ -97,8 +97,10 @@ finally
 }
 ```
 
-# Question: Describe the C# dispose of the method in detail.
-Answer: Dispose of the method: The disposeof() method releases the unused resources by an object of the class. The unused resources like files, data connections, etc. This method is declared in the interface called IDisposable which is implemented by the class by defining the interface IDisposable body. Dispose method is not called automatically, the programmer has to implement it manually for the efficient usage of the resources.
+
+
+# Question9: Describe the C# disposeof() the method in detail.
+Answer: Disposeof the method: The disposeof() method releases the unused resources by an object of the class. The unused resources like files, data connections, etc. This method is declared in the interface called IDisposable which is implemented by the class by defining the interface IDisposable body. Dispose method is not called automatically, the programmer has to implement it manually for the efficient usage of the resources.
 
 # Question: Explain in detail the finalize method in C#?
 Answer: Finalize method- The finalize () method is defined in the object class which is used for cleanup activities. This method is generally called by the garbage collector whenever the reference of any object is not used for a long time. Garbage collector frees that managed resources automatically but if you want to free the unused resources like filehandle, data connection, etc., then you have to implement the finalize method manually.
@@ -107,8 +109,11 @@ Answer: Finalize method- The finalize () method is defined in the object class w
 Answer: An exception is a raised problem that may occur during the execution of the program. Handling exceptions offers a simple way to pass the control within the program whenever an exception is raised. C# exceptions are handled by using 4 keywords and those are try, catch, finally, throw.
 
 try: a raised exception finds a particular block of code to get handled. There is no limit on the number of catch blocks that you will use in your program to handle different types of exception raised.
+
 catch: you can handle the raised exception within this catch block. You can mention the steps that you want to do to solve the error or you can ignore the error by suppressing it by the code.
+
 Finally: irrespective of the error, if you still want some set of instructions to get displayed then you can use those statements within the finally block and it will display it on the screen.
+
 throw: you can throw an exception using the throw statement. It will display the type of error you are getting.
 Syntax:
 
@@ -136,20 +141,24 @@ Syntax:
 {
 //code
 }
-A destructor is called automatically:
-when the program finishes its execution.
-Whenever a scope of the program ends that defines a local variable.
-Whenever you call the delete operator from your program.
-Question: Define method overloading with example.
+```
+
+### A destructor is called automatically:
+- when the program finishes its execution.
+- Whenever a scope of the program ends that defines a local variable.
+- Whenever you call the delete operator from your program.
+
+# Question: Define method overloading with example.
 Answer: Method overloading allows programmers to use multiple methods but with the same name. Every defined method within a program can be differentiated on the basis of the number and the type of method arguments. It is a concept based on polymorphism.
 
-Method overloading can be achieved by the following:
+### Method overloading can be achieved by the following:
 
-By changing the number of parameters in the given method
-By changing the order of parameters passed to a method
-By using different data types as the passed parameters
+- By changing the number of parameters in the given method
+- By changing the order of parameters passed to a method
+- By using different data types as the passed parameters
+
 For example:
-
+```
 public class Methodoveloading    
   {    
     public int sum(int a, int b)  //two int type Parameters method  
@@ -171,15 +180,16 @@ public class Methodoveloading
 # Question: What are the control statements that are used in C#?
 Answer: You can control the flow of your set of instructions by using control statements and we majorly focus on if statements. There are a few types of if statements that we consider for making situations to control the flow of execution within a program.
 
-These are the 4 types of if statements:
+### These are the 4 types of if statements:
 
-If
-If-else
-Nested if
-If-else-if 
-These statements are commonly used within programs.
+-  If
+- If-else
+- Nested if
+- If-else-if 
 
-If statements checks for the user given condition to satisfy their programming condition. If it returns true then the set of instructions will be executed.
+**These statements are commonly used within programs.**
+
+**If statements checks for the user given condition to satisfy their programming condition. If it returns true then the set of instructions will be executed.**
 
 Syntax:
 
@@ -188,6 +198,7 @@ If(any condition)
 {
 //code to be executed if the condition returns true
 }
+
 If-else statement checks for the given condition, if the condition turns out to be false then the flow will transfer to the else statement and it will execute the else instructions. In case, the if condition turns out to be true then the if instructions will get executed.
 
 Syntax:
