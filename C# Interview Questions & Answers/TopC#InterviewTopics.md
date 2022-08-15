@@ -27,3 +27,14 @@
 - How you can define the exception handling in C#?
 - Describe the C# dispose of the method in detail.
 -  Explain in detail the finalize method in C#?
+-  What is Common Language Runtime (CLR)?
+- What are indexers in C# .NET?
+- What is garbage collection in C#?
+- What is Jagged Arrays?
+- What is Singleton design pattern in C#?
+- How to implement a singleton design pattern in C#?
+- What is the difference between Array and ArrayList?
+- Distinguish between System.String and System.Text.StringBuilder classes?
+- Illustrate the differences between the System.Array.CopyTo() and System.Array.Clone()?
+- What is the difference between public, static and void?
+- What is the difference between method overloading and method overriding in C#?
