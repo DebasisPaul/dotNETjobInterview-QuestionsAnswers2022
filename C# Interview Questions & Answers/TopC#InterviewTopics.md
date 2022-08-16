@@ -1,4 +1,5 @@
 - What is meant by object-oriented programming?
+- How would you explain the four fundamental concepts of object-oriented programming? 
 # Question 5: How can you describe object-oriented concepts in detail?
 Answer:  C# is an object-oriented programming language that supports 4 OOP concepts.
 
@@ -58,7 +59,7 @@ Sealed Class:  One cannot inherit a sealed class from another class and restrict
 
 - What are the advantages of generics in C#?
 - What are the disadvantages of generics in C#?
-- How would you explain the four fundamental concepts of object-oriented programming? 
+
 - What is meant by dependency injection in C#?
 
 - What are boxing and unboxing in C#?
