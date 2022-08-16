@@ -57,6 +57,52 @@ Partial Class: It is a type of class that allows dividing their properties, meth
 Sealed Class:  One cannot inherit a sealed class from another class and restricts the class properties. Any access modifiers cannot be applied to the sealed class. 
 
 
+# What are Generics in C#?
+In C# collections, defining any kind of object is termed okay which compromises C#’s basic rule of type-safety. Therefore, generics were included to type-safe the code by allowing re-use of the data processing algorithms. Generics in C# mean not linked to any specific data type. Generics reduce the load of using boxing, unboxing, and typecasting objects. Generics are always defined inside angular brackets <>. To create a generic class, this syntax is used:
+
+```
+GenericList<float> list1 = new GenericList<float>();
+GenericList<Features> list2 = new GenericList<Features>();
+GenericList<Struct> list3 = new GenericList<Struct>();
+Here, GenericList<float> is a generic class. In each of these instances of GenericList<T>, every occurrence of T in the class is substituted at run time with the type argument. By substituting the T, we have created three different type-safe using the same class.
+```
+
+# What are Properties in C#?
+Properties in C# are public members of a class where they provide the ability to access private members of a class. The basic principle of encapsulation lets you hide some sensitive properties from the users by making the variables private. The private members are not accessible otherwise in a class. Therefore, by using properties in C# you can easily access the private members and set their values. 
+
+The values can be easily assigned using get and set methods, also known as accessors. While the get method extracts the value, the set method assigns the value to the variables. 
+
+
+# What are the Arrays in C#?
+When a group of similar elements is clubbed together under one name, they are called arrays. Array is a set of related instances either value or reference types.
+
+### There are three types of array supported by C#:
+
+- Single Dimensional Array: It contains a single row. It is also known as vector array.
+- Multi Dimensional Array: It is rectangular and contains rows and columns.
+- Jagged Array: It also contains rows and columns but it has an irregular shape.
+
+```
+For ex. An array of tea Atea[4]: [green tea, chamomile tea, black tea, lemon tea]. The length of the array defines how many elements are present in the array. 
+
+In C#, the memory allocations for the elements of the array happen dynamically.  This is how values are stored in an array sequentially.
+```
+### Arrays in C#
+A few pointers for arrays in C#:
+```
+The memory allocation is DYNAMIC.
+Arrays in C# are treated as objects.
+The length of the array is easy to find by detecting the number of members in the array.
+The members in the array are ordered and begin with the index value=0.
+The array types are reference types derived from the base array type.
+Syntax: < Data Type > [ ] < Name_Array >
+```
+
+# What is difference between “is” and “as” operators in c#?
+“is” operator is used to check the compatibility of an object with a given type, and it returns the result as Boolean.
+
+“as” operator is used for casting of an object to a type or a class.
+
 - What are the advantages of generics in C#?
 - What are the disadvantages of generics in C#?
 
